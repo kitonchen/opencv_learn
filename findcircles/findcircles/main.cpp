@@ -7,11 +7,6 @@ int main()
 	VideoCapture cap(0);//打开摄像头
 	Mat in_img;//存储帧
 	Mat two_img;
-
-
-
-
-
 	vector<cv::Vec3f> circles;//圆向量
 	namedWindow("摄像头");//创建窗口
 	if (cap.isOpened())//判断摄像头是否打开
