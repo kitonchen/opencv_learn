@@ -26,3 +26,4 @@
 *.exe
 *.out
 *.app
+/contour_fitting/Debug/*.ilk
