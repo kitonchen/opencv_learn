@@ -60,9 +60,39 @@ int main()
 	help();
 	VideoCapture cap;//摄像头对象
 	Rect trackWindow;
-	RotatedRect tracBox;
-
+	RotatedRect tracBox;//旋转的矩阵类
 	int hsize = 16;
-	
+	float hranges[] = { 0,180 };//计算直方图函数中使用
+	const float* phranges = hranges;
+	cap.open(0);//打开摄像头
+	if (!cap.isOpened())
+	{
+		cout << "摄像头打开失败" << endl;
+		return -1;
+	}
+	namedWindow("直方图", 0);
+
+	namedWindow("追踪颜色", 0);
+
+	setMouseCallback("追踪颜色", onMouse, 0);//消息相应机制
+
+	createTrackbar("Vmin", "追踪颜色", &vmin, 256, 0);//创建滑动条，最小值为256
+
+	createTrackbar("Vmax", "追踪颜色", &vmax, 256, 0);//最后一个参数为0代表没调用滑动拖动的响应函数
+
+	cvCreateTrackbar("Smin", "追踪颜色", &smin, 256, 0);//vmin，vmax，smin初始值为10，256，30
+	Mat frame, hsv, hue, mask, hist, histing = Mat::zeros(200, 320, CV_8UC3), backproj;
+
+	bool paused = false;
+
+	while (1)
+	{
+		if (!paused)//没有暂停
+		{
+			cap >> frame;//从摄像头读取一帧
+		}
+	}
+
+
 	return 0;
 }
