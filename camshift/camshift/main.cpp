@@ -20,7 +20,6 @@ using namespace cv;
 
 	int vmin = 10, vmax = 256, smin = 30;
 
-
 void onMouse(int event,int x,int y,void*)
 {
 	if (selectObject)//当鼠标左键按下去时才有效，然后通过if里面的代码确定所选择的矩形区域的选择了
@@ -58,6 +57,7 @@ void help()
 int main()
 {
 	help();
+	MouseCallback onMouse;
 	VideoCapture cap;//摄像头对象
 	Rect trackWindow;
 	RotatedRect tracBox;//旋转的矩阵类
@@ -74,7 +74,7 @@ int main()
 
 	namedWindow("追踪颜色", 0);
 
-	setMouseCallback("追踪颜色", onMouse, 0);//消息相应机制
+	setMouseCallback("颜色追踪", onMouse, 0);//消息相应机制
 
 	createTrackbar("Vmin", "追踪颜色", &vmin, 256, 0);//创建滑动条，最小值为256
 
@@ -90,6 +90,13 @@ int main()
 		if (!paused)//没有暂停
 		{
 			cap >> frame;//从摄像头读取一帧
+			if (frame.empty()) {//如果数据为空
+				break;
+			}
+			frame.copyTo(image);
+			if (!paused) {
+
+			}
 		}
 	}
 
