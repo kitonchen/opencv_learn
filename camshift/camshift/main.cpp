@@ -109,8 +109,24 @@ int main()
 						Mat roi(hue, selection), maskroi(mask, selection);//mask保存的HSV的最小值
 						//calchist()函数第一个参数为输入矩阵序列，第2个参数表示输入的矩阵数目，第三个参数表示将被计算直方图维数通道的列表，第4个参数表示可选的掩码函数
 						//第5个参数表述输出直方图，第6个参数表示直方图的维数，第7个参数为每一维直方图数组的大小，第8个参数为每一维直方图bin的边界
-						calcHist(&roi, 1, 0, maskroi, hist, 1, &hsize, &phranges);//建行roi的0通道计算直方图并通过mask放入hist中，hsize为每一维直方图的大小
-					}
+						calcHist(&roi, 1, 0, maskroi, hist, 1, &hsize, &phranges);//将roi的0通道计算直方图并通过mask放入hist中，hsize为每一维直方图的大小
+						normalize(hist, hist, 0, 255, CV_MINMAX);//将hist矩阵进行数据范围归一化，都归一化到0~255
+						trackWindow = selection;
+						trackObject = 1;//只要鼠标选完区域松开后，且没有按键盘清0建'c'，则trackobject一直保持为1，因此该if函数只能执行一次，除非重新选择跟踪区域
+						histing = Scalar::all(0);//与按下‘c’键是一样的，这里的all(0)表示的是标量全部清0
+						int binw = (histing.cols) / hsize;//histing是一个200*300的矩阵，hsize应该是每一个bin的宽度，也就是histing矩阵能分出几个bin出来
+						Mat buf(1, hsize, CV_8UC3);//定义一个缓冲单bin矩阵
+						for (int i = 0; i < hsize; i++) {//saturate_case函数为从一个初始类型准确变换到另一个准确类型
+							buf.at<Vec3b>(i) = Vec3b(saturate_cast<uchar>(i * 180 / hsize), 255, 255);//Vec3b为3个char值的向量
+			  		    }
+                      cvtColor(buf, buf, CV_HSV2BGR);//将hsv又转换为bgr
+					  for (int i = 0; i < hsize; i++) {
+						int val = saturate_cast<int>(hist.at<float>(i)*histing.rows / 255);//at函数返回一个指定数组元素的参考值
+						rectangle(histing, Point(i*binw, histing.rows), Point((i + 1)*binw, histing.rows - val), Scalar(buf.at<Vec3b>(i)), -1, 8);//在一幅输入图像上画一个简单抽的矩形，指定左上角和右下角，并定义颜色，大小，线型等
+					  }
+				}
+					calcBackProject(&hue, 1, 0, hist, backproj, &phranges);//计算直方图的反向投影
+					
 				}
 			}
 		}
