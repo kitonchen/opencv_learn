@@ -1,0 +1,17 @@
+﻿生成启动时间为 2016/2/17 21:51:08。
+     1>项目“E:\学习资料\learn_opencv\基本图像操作\图像金字塔\图像金字塔.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>e:\opencv\build\include\opencv2\core\mat.hpp(1963): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       Link:
+         D:\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\学习资料\learn_opencv\基本图像操作\Debug\2.3图像金字塔.exe" /INCREMENTAL /NOLOGO opencv_ts300d.lib opencv_world300d.lib opencv_ts300.lib opencv_world300.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\学习资料\learn_opencv\基本图像操作\Debug\2.3图像金字塔.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\学习资料\learn_opencv\基本图像操作\Debug\2.3图像金字塔.lib" /MACHINE:X86 Debug\main.obj
+         图像金字塔.vcxproj -> E:\学习资料\learn_opencv\基本图像操作\Debug\2.3图像金字塔.exe
+     1>已完成生成项目“E:\学习资料\learn_opencv\基本图像操作\图像金字塔\图像金字塔.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:02.12

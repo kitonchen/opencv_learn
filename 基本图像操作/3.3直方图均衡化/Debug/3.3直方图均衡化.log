@@ -1,0 +1,13 @@
+﻿  main.cpp
+e:\opencv\build\include\opencv2\core\mat.hpp(1963): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(43): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(52): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(54): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(57): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(59): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(62): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+e:\学习资料\learn_opencv\基本图像操作\3.3直方图均衡化\main.cpp(64): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  3.3直方图均衡化.vcxproj -> E:\学习资料\learn_opencv\基本图像操作\Debug\3.3直方图均衡化.exe

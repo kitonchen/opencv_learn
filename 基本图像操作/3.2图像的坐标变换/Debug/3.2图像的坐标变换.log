@@ -1,0 +1,6 @@
+﻿  main.cpp
+e:\opencv\build\include\opencv2\core\mat.hpp(1963): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  3.2图像的坐标变换.vcxproj -> E:\学习资料\learn_opencv\基本图像操作\Debug\3.2图像的坐标和距离变换.exe

@@ -1,0 +1,7 @@
+﻿  main.cpp
+e:\opencv\build\include\opencv2\core\mat.hpp(1963): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\学习资料\learn_opencv\findcircles\findcircles\main.cpp(21): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  findcircles.vcxproj -> E:\学习资料\learn_opencv\findcircles\Debug\findcircles.exe
